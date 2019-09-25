@@ -1,0 +1,25 @@
+.header-wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.home-link {
+    text-decoration: none;
+    color: white;
+}
+.myprofile-link {
+    text-decoration: none;
+    color: white;
+}
+.login-link {
+    text-decoration: none;
+    color: white;
+}
+.signup-link {
+    text-decoration: none;
+    color: white;
+}
+body {
+    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35));
+}
