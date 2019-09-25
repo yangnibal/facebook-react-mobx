@@ -1,0 +1,79 @@
+.Header-Login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    height: 25vw;
+    width: 30vw;
+    margin: 0 auto;
+    margin-top: 20vh;
+    background: white;
+}
+.sign-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.Sign-in-link {
+    text-align: center;
+    width: 45%;
+    text-decoration: none;
+    font-weight: 500;
+    color: #83d3c9;
+    padding: 10px;
+    margin-left: 10px;
+}
+.Sign-in-link:hover {
+    font-weight: 800;
+}
+.Sign-up-link {
+    text-align: center;
+    width: 45%;
+    text-decoration: none;
+    font-weight: 500;
+    color: #83d3c9;
+    padding: 10px;
+    margin-right: 10px;
+}
+.Sign-up-link:hover {
+    font-weight: 800;
+}
+.login-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    width: 60%;
+}
+.login-email-input {
+    border: none;
+    border-bottom: 1px solid #83d3c9;
+    width: 100%;
+    height: 3vw;
+    margin: 4vw;
+    outline: none;
+}
+.login-email-input:hover {
+    border-bottom: 3px solid #83d3c9;
+} 
+.login-email-input::placeholder {
+    font-weight: 400;
+    font-size: 15px; 
+}
+.login-password-input {
+    border: none;
+    border-bottom: 1px solid #83d3c9;
+    width: 100%;
+    height: 3vw;
+    margin: 4vw;
+    margin-bottom: 5vw;
+    margin-top: 0;
+    outline: none;
+}
+.login-password-input:hover {
+    border-bottom: 3px solid #83d3c9;
+} 
+.login-password-input::placeholder {
+    font-weight: 400;
+    font-size: 15px; 
+}

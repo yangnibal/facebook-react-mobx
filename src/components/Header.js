@@ -19,13 +19,8 @@ class Header extends Component {
             )
         }
         return (
-            <div className="Header-Login-box">
-                <LoginForm/>
-                <div className="sign-wrapper">
-                    <button className="Sign-in-button" type="submit"><Link className="Sign-in-loginbox-link">Sign In</Link></button>
-                    <button className="Sign-up-button" type="submit"><Link className="Sign-up-loginbox-link">Sign Up</Link></button>
-                </div>
-            </div>
+            <LoginForm/>
+            
         )
     }
 }
