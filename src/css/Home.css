@@ -1,0 +1,30 @@
+.home-container {
+    height: auto;
+    white-space: nowrap;
+}
+.Login-please {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 30px;
+    color: white;
+}
+.header-wrapper {
+    
+}
+.hello-name {
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem auto;
+    margin-top: 3rem;
+    color: white;
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.header {
+    width: 100vw;
+}

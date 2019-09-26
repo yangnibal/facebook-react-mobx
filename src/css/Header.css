@@ -3,23 +3,31 @@
     display: flex;
     flex-direction: row;
     justify-content: right;
-    height: 20vh;
+    height: 6vh;
 }
 .home-link {
     text-decoration: none;
     color: white;
+    font-size: 1.5rem;
+    margin: 10px 20px;
+    cursor: pointer;
 }
 .myprofile-link {
     text-decoration: none;
     color: white;
+    font-size: 1.5rem;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+.logout-button {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    margin: 10px 20px;
+    cursor: pointer;
 }
 .login-link {
     text-decoration: none;
-    color: white;
-}
-.signup-link {
-    text-decoration: none;
-    color: white;
 }
 body {
     background: #83d3c9;

@@ -1,0 +1,102 @@
+.signup-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    height: auto;
+    width: 30vw;
+    margin: 0 auto;
+    margin-top: 10vh;
+    background: white;
+    overflow: scroll;
+    margin-bottom: 10vh;
+}
+.signup-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    width: 60%;
+}
+.signup-input-name {
+    border: none;
+    border-bottom: 1px solid #83d3c9;
+    width: 100%;
+    height: 3vw;
+    margin: 4vw;
+    outline: none;
+}
+.signup-input-name:hover {
+    border-bottom: 3px solid #83d3c9;
+}
+.signup-input-name::placeholder {
+    font-weight: 400;
+    font-size: 15px; 
+}
+.signup-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.signin-button {
+    text-align: center;
+    width: 40%;
+    text-decoration: none;
+    font-weight: 500;
+    color: #83d3c9;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.signin-button:hover {
+    font-weight: 800;
+    cursor: pointer;
+}
+.signup-input-phone {
+    border: none;
+    border-bottom: 1px solid #83d3c9;
+    width: 100%;
+    height: 3vw;
+    margin: 4vw;
+    margin-top: 2vw;
+    outline: none;
+}
+.signup-input-phone:hover {
+    border-bottom: 3px solid #83d3c9;
+}
+.signup-input-phone::placeholder {
+    font-weight: 400;
+    font-size: 15px; 
+}
+.signup-input-email {
+    border: none;
+    border-bottom: 1px solid #83d3c9;
+    width: 100%;
+    height: 3vw;
+    margin: 4vw;
+    margin-top: 2vw;
+    outline: none;
+}
+.signup-input-email:hover {
+    border-bottom: 3px solid #83d3c9;
+}
+.signup-input-email::placeholder {
+    font-weight: 400;
+    font-size: 15px; 
+}
+.signup-input-password {
+    border: none;
+    border-bottom: 1px solid #83d3c9;
+    width: 100%;
+    height: 3vw;
+    margin: 4vw;
+    margin-top: 2vw;
+    outline: none;
+}
+.signup-input-password:hover {
+    border-bottom: 3px solid #83d3c9;
+}
+.signup-input-password::placeholder {
+    font-weight: 400;
+    font-size: 15px; 
+}

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { Link } from 'react-router-dom';
-import LoginForm from './LoginForm';
 import '../css/Header.css';
 
 @inject('store')
@@ -9,18 +8,12 @@ import '../css/Header.css';
 class Header extends Component {
     render() {
         const { store } = this.props;
-        if(store.isLogin===true) {
-            return (
-                <div className="header-wrapper">
-                    <div><Link className="home-link" to="/">home</Link></div>
-                    <div><Link className="myprofile-link" to="/profile/:user">myprofile</Link></div>
-                    <div><button className="logout-button" onClick={store.handleLogin}>logout</button></div>
-                </div>
-            )
-        }
         return (
-            <LoginForm/>
-            
+            <div className="header-wrapper">
+                <div className="home-link" onClick={store.handletoHome}>home</div>
+                <div className="myprofile-link" onClick={store.handletoProfile}>myprofile</div>
+                <Link className="login-link" to="/login"><div className="logout-button" onClick={store.handleLoginfalse}>logout</div></Link>
+            </div>
         )
     }
 }

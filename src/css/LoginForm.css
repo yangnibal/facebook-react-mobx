@@ -25,6 +25,7 @@
 }
 .Sign-in-link:hover {
     font-weight: 800;
+    cursor: pointer;
 }
 .Sign-up-link {
     text-align: center;
@@ -37,6 +38,7 @@
 }
 .Sign-up-link:hover {
     font-weight: 800;
+    cursor: pointer;
 }
 .login-info-wrapper {
     display: flex;
