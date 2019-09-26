@@ -3,6 +3,7 @@ import { observer, inject } from 'mobx-react';
 import Store from '../store/Store';
 import Header from '../components/Header';
 import '../css/Home.css';
+import PostList from '../components/PostList';
 
 @inject('store')
 @observer
@@ -16,13 +17,14 @@ class Home extends Component {
         }
         return (
             <div className="home-container">
-            <div className="header-wrapper">
-                <div className="header"><Header/></div>
-                <div className="hello-name">Welcome Back!,{store.name}</div>
-                <div className="content-wrapper">
-
+                <div className="header-wrapper">
+                    <div className="header"><Header/></div>
+                    <div className="hello-name">Welcome Back!, {store.name}</div>
                 </div>
-            </div>
+                <div className="white-space"></div>
+                <div className="content-wrapper">
+                    <PostList/>
+                </div>
             </div>
         )
     }

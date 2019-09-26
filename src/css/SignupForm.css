@@ -38,20 +38,6 @@
     flex-direction: row;
     width: 100%;
 }
-.signin-button {
-    text-align: center;
-    width: 40%;
-    text-decoration: none;
-    font-weight: 500;
-    color: #83d3c9;
-    padding: 10px;
-    margin: 0 auto;
-    margin-bottom: 1rem;
-}
-.signin-button:hover {
-    font-weight: 800;
-    cursor: pointer;
-}
 .signup-input-phone {
     border: none;
     border-bottom: 1px solid #83d3c9;
@@ -99,4 +85,32 @@
 .signup-input-password::placeholder {
     font-weight: 400;
     font-size: 15px; 
+}
+.password-check-button {
+    text-align: center;
+    width: 40%;
+    text-decoration: none;
+    font-weight: 500;
+    color: #83d3c9;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+.password-check-button:hover {
+    font-weight: 800;
+    cursor: pointer;
+}
+.signin-button {
+    text-align: center;
+    width: 40%;
+    text-decoration: none;
+    font-weight: 500;
+    color: #83d3c9;
+    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.signin-button:hover {
+    font-weight: 800;
+    cursor: pointer;
 }

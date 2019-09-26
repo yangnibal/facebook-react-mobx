@@ -12,8 +12,8 @@ class Header extends Component {
             <div className="header-wrapper">
                 <div className="home-link" onClick={store.handletoHome}>home</div>
                 <div className="myprofile-link" onClick={store.handletoProfile}>myprofile</div>
-                <div className="newpost-link" onClick={store.handletoWritePost}>new post</div>
-                <Link className="login-link" to="/login"><div className="logout-button" onClick={store.handleLoginfalse}>logout</div></Link>
+                <Link className="newpost-link" to="/add_post">new post</Link>
+                <Link className="login-link" to="/"><div className="logout-button" onClick={store.handleLoginfalse}>logout</div></Link>
             </div>
         )
     }

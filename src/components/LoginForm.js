@@ -11,6 +11,7 @@ class LoginForm extends Component {
         return (
             <div className="Header-Login-box">
                 <div className="login-info-wrapper">
+                    <input name="name" onChange={store.handleChange} className="login-name-input" type="text" value={store.name} placeholder="name"/>   
                     <input name="email" onChange={store.handleChange} className="login-email-input" type="text" value={store.email} placeholder="email"/>
                     <input name="password" onChange={store.handleChange} className="login-password-input" type="password" value={store.password} placeholder="password"/>
                 </div>

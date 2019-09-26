@@ -16,7 +16,7 @@ class SignupForm extends Component {
                     <input type="text" name="email" className="signup-input-email" value={store.email} onChange={store.handleChange} placeholder="email"/>
                     <input type="password" name="password" className="signup-input-password" value={store.password} onChange={store.handleChange} placeholder="password"/>
                     <input type="password" name="passwordcheck" className="signup-input-password" value={store.passwordcheck} onChange={store.handleChange} placeholder="password-check"/>
-                    <button type="submit" onClick={store.isPwChecked} className="password-check-button">check</button>
+                    <div onClick={store.isPwChecked} className="password-check-button">check</div>
                 </div>
                 <div className="signup-button-wrapper">
                     <Link to="/home" className="signin-button" onClick={store.handleLogintrue}>sign in</Link>

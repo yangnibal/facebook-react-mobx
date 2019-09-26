@@ -6,6 +6,7 @@ import LoginForm from '../components/LoginForm';
 @observer
 class Login extends Component {
     render() {
+        
         return (
             <div>
                 <LoginForm/>

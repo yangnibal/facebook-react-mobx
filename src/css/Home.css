@@ -8,9 +8,6 @@
     font-size: 30px;
     color: white;
 }
-.header-wrapper {
-    
-}
 .hello-name {
     text-align: center;
     font-size: 3rem;
@@ -28,4 +25,8 @@
 }
 .header {
     width: 100vw;
+}
+.white-space {
+    width: 10vw;
+    height: 15rem;
 }

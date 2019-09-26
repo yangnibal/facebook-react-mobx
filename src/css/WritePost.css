@@ -1,0 +1,60 @@
+.writepost-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.passage-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.title-input {
+    margin: 5rem auto;
+    width: 30vw;
+    border: none;
+    outline: none;
+    height: 3vw;;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+.title-input::placeholder {
+    font-size: 1rem;
+}
+.passage-input {
+    margin: 5rem auto;
+    width: 30vw;
+    border: none;
+    outline: none;
+    height: 10vw;;
+    font-size: 2rem;
+}
+.passage-input::placeholder {
+    font-size: 2rem;
+}
+.post-link {
+    text-align: center;
+    width: 45%;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding: 10px;
+    margin-left: 10px;
+}
+.post-link:hover {
+    font-weight: 800;
+    cursor: pointer;
+}
+.cancle-link {
+    text-align: center;
+    width: 45%;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+}
+.cancle-link:hover {
+    font-weight: 800;
+    cursor: pointer;
+}
