@@ -2,6 +2,7 @@ import React from 'react';
 import { observable, action } from 'mobx';
 
 export default class Store {
+    @observable id = 0;
     @observable isLogin = false;
     @observable isSignup = false;
     @observable name = '';
@@ -29,6 +30,10 @@ export default class Store {
     @action handletoSignup = (e) => {
         e.preventDefault();
         window.location="/signup"
+    }
+    @action handletoWritePost = (e) => {
+        e.preventDefault();
+        window.location="/add_post"
     }
     @action handleChange = (e) => {
         const { name, value } = e.target; 

@@ -19,6 +19,13 @@
     margin: 10px 20px;
     cursor: pointer;
 }
+.newpost-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    margin: 10px 20px;
+    cursor: pointer;
+}
 .logout-button {
     text-decoration: none;
     color: white;

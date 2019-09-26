@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import WritePost from './pages/WritePost';
 import NoMatch from './pages/NoMatch';
 import './App.css';
 
@@ -19,6 +20,7 @@ class App extends Component {
 					<Route path="/home" component={Home}/>
 					<Route path="/profile/:userid" component={Profile}/>
 					<Route path="/signup" component={Signup}/>
+					<Route path="/add_post" component={WritePost}/>
 					<Route component={NoMatch}/>
         		</Switch>
     		</div>
