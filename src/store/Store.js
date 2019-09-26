@@ -20,11 +20,11 @@ export default class Store {
     }
     @action handletoHome = (e) => {
         e.preventDefault();
-        window.location="/";
+        window.location="/home";
     }
     @action handletoLogin = (e) => {
         e.preventDefault();
-        window.location="/login";
+        window.location="/";
     }
     @action handletoSignup = (e) => {
         e.preventDefault();

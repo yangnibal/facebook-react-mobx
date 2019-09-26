@@ -19,7 +19,7 @@ class SignupForm extends Component {
                     <button type="submit" onClick={store.isPwChecked} className="password-check-button">check</button>
                 </div>
                 <div className="signup-button-wrapper">
-                    <Link to="/" className="signin-button" onClick={store.handleLogintrue}>sign in</Link>
+                    <Link to="/home" className="signin-button" onClick={store.handleLogintrue}>sign in</Link>
                 </div>
             </div>
         )

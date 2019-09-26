@@ -15,7 +15,7 @@ class LoginForm extends Component {
                     <input name="password" onChange={store.handleChange} className="login-password-input" type="password" value={store.password} placeholder="password"/>
                 </div>
                 <div className="sign-wrapper">
-                    <Link onClick={store.handleLogintrue} to="/" className="Sign-in-link">Sign In</Link>
+                    <Link onClick={store.handleLogintrue} to="/home" className="Sign-in-link">Sign In</Link>
                     <div onClick={store.handletoSignup} className="Sign-up-link">Sign Up</div>
                 </div>
             </div>
