@@ -1,19 +1,23 @@
 import React,{ Component } from 'react';
 import { inject, observer } from 'mobx-react';
+import '../css/DetailForm.css';
 
+@inject(store => ({
+    findlist: store.store.findlist
+}))
 @observer
-@inject('store')
 class DetailForm extends Component {
     render() {
-        const { store, id } = this.props
+        const { findlist } = this.props
         return (
-            <div id={id} className="detailform-wrapper">
-                <div>{store.title}</div>
-                <div>{store.name}</div>
-                <div>{store.passage}</div>
+            <div className="detailform-wrapper">
+                <div className="content-title">{findlist.title}</div>
+                <div className="content-name">{findlist.name}</div>
+                <div className="content-passage">{findlist.passage}</div>
             </div>
         )
     }
 }
 
 export default DetailForm;
+

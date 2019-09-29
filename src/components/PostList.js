@@ -3,7 +3,7 @@ import { inject, observer } from 'mobx-react';
 import Post from './Post';
 import '../css/PostList.css';
 
-const PostList = ({ lists, onRemove }) => {
+const PostList = ({ lists, onRemove, onFind }) => {
     const posts = lists.map(post => (
         <Post
             name={post.name}
@@ -12,6 +12,7 @@ const PostList = ({ lists, onRemove }) => {
             key={post.id}
             id={post.id}
             onRemove={onRemove}
+            onFind={onFind}
         />
     ));
     return (
@@ -22,4 +23,5 @@ const PostList = ({ lists, onRemove }) => {
 export default inject(({ store }) => ({
     lists: store.postlist,
     onRemove: store.handleRemove,
+    onFind: store.handleFind,
 }))(observer(PostList));

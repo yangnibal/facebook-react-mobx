@@ -8,7 +8,7 @@ import DetailForm from '../components/DetailForm';
 @observer
 class Detail extends Component {
     render() {
-        const { store, match } = this.props;
+        const { store } = this.props;
         if(store.isLogin===false) {
             return (
                 <div className="Login-please-wrapper">
@@ -22,7 +22,8 @@ class Detail extends Component {
                     <Header/>
                 </div>
                 <div className="index-wrapper">
-                    <DetailForm id={store.postlist.id}/>
+                    <DetailForm/>
+                    
                 </div>
             </div>
         )

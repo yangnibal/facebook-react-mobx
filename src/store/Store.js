@@ -2,6 +2,7 @@ import { observable, action } from 'mobx';
 
 export default class Store {
     @observable postlist = [];
+    @observable findlist = [];
     @observable id = 0;
     @observable key = 0;
     @observable isLogin = false;
@@ -119,6 +120,9 @@ export default class Store {
     }
     @action handleRemove = (id) => {
         this.postlist = this.postlist.filter(post => post.id !== id)
+    }
+    @action handleFind = (id) => {
+        this.findlist = this.postlist.find(post => post.id === id)
     }
 }
 
