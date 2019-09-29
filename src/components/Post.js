@@ -11,7 +11,7 @@ const Post = ({ title, name, id, onRemove }) => {
                 <Link className="post-detail" to={`/profile/${name}/${id}`}>자세히 보기</Link>
             </div>
             <div className="button-post">
-                <button className="remove-button" onClick={() => onRemove(name)}>삭제</button>
+                <button className="remove-button" onClick={() => onRemove(id)}>삭제</button>
             </div>
         </div>
     )

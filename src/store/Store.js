@@ -117,8 +117,8 @@ export default class Store {
         this.passage = ""
         
     }
-    @action handleRemove = (name) => {
-        this.postlist = this.postlist.filter(post => post.name !== name)
+    @action handleRemove = (id) => {
+        this.postlist = this.postlist.filter(post => post.id !== id)
     }
 }
 

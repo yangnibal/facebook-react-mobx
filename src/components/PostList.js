@@ -9,7 +9,7 @@ const PostList = ({ lists, onRemove }) => {
             name={post.name}
             title={post.title}
             passage={post.passage}
-            key={post.name}
+            key={post.id}
             id={post.id}
             onRemove={onRemove}
         />
