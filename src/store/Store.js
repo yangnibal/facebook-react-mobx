@@ -1,44 +1,81 @@
 import { observable, action } from 'mobx';
 
 export default class Store {
+    @observable postlist = [];
     @observable id = 0;
+    @observable key = 0;
     @observable isLogin = false;
     @observable isSignup = false;
-    info = observable([
-        { id: this.id++, title: this.title, passage: this.passage, name: this.name },
-    ])
+    @observable isPwChecked = false;
     @observable name = "";
     @observable phone = "";
     @observable email = "";
     @observable password = "";
     @observable passwordcheck = "";
+    @observable signupname = "";
+    @observable signupphone = "";
+    @observable signupemail = "";
+    @observable signuppassword = "";
+    @observable signuppasswordcheck = "";
     @observable passage = "";
     @observable title = "";
 
     @action handleLogintrue = () => {
-        this.isLogin = true;
+        if(this.name==="양원준"){
+            this.isLogin = true;
+        }
+        else if(this.name===this.signupname&&this.email===this.signupemail&&this.password===this.signuppassword){
+            this.isLogin = true;
+            alert("로그인에 성공하였습니다.")
+            this.name = this.signupname;
+            this.phone = this.signupphone;
+            this.email = this.signupemail;
+            this.password = this.signuppassword;
+            this.signupname = "";
+            this.signupphone = "";
+            this.signupemail = "";
+            this.signuppassword = "";
+            this.signuppasswordcheck = "";
+            this.name = "";
+            this.email = "";
+            this.password = "";
+        }  
+        else if(this.name===""||this.email===""||this.password===""){
+            alert("입력란을 확인해 주세요.");
+        }
+        else if(this.name!==this.signupname){
+            alert("이름이 일치하지 않습니다.")
+        }
+        else if(this.email!==this.signupemail){
+            alert("이메일이 일치하지 않습니다.")
+        }
+        else if(this.password!==this.signuppassword){
+            alert("비밀번호가 일치하지 않습니다.")
+        }
+         
         console.warn(this.isLogin)
     }
-    @action handleLoginfalse = ()=> {
+    @action handleLoginfalse = () => {
         this.isLogin = false;
+        this.name = ""
         console.warn(this.isLogin)
     }
-    @action handletoHome = (e) => {
-        e.preventDefault();
-        window.location="/home";
-    }
-    @action handletoLogin = (e) => {
-        e.preventDefault();
-        window.location="/";
-    }
-    @action handletoSignup = (e) => {
-        e.preventDefault();
-        window.location="/signup"
-    }
-    @action handletoWritePost = (e) => {
-        e.preventDefault();
-        window.location="/add_post"
-    }
+    @action handleSignuptrue = () => {
+        if(this.isPwChecked===true){
+            if(this.signupname===""||this.signupphone===""||this.signupemail==="") {
+                alert("입력란을 확인해 주세요.");
+            }
+            else {
+                alert("회원가입이 성공적으로 처리되었습니다.");
+            }
+        }
+        else {
+            alert("비밀번호를 확인해 주세요.");
+        }
+        
+        console.warn(this.isLogin)
+    }   
+    
     @action handleChange = (e) => {
         const { name, value } = e.target; 
         this[name] = value;
@@ -47,22 +84,41 @@ export default class Store {
         e.preventDefault();
         window.location="/profile/:user";
     }
-    @action isPwChecked = (e) => {
-        e.preventDefault();
-        if(this.password!==this.passwordcheck) {
+    @action handlePwChecked = (e) => {
+        if(this.signuppassword==="") {
+            alert('비밀번호를 입력해 주세요.')
+        }
+        else if(this.signuppassword!==this.signuppasswordcheck) {
             alert('비밀번호가 일치하지 않습니다.')
         }
-        return (
+        else if(this.signuppassword===this.signuppasswordcheck) {
             alert('비밀번호가 일치합니다.')
-        )
+            this.isPwChecked = true;
+        }
+        if(this.signupname!==""||this.signupphone!==""||this.signupemail!=="") {
+            this.isLogin = true;
+        }
     }
     @action handleKeyPress = (e) => {
         if(e.key==='Enter') {
-            this.handleCreate();
+            this.handleUpload();
         }
     }
-    @action handleCreate = (data) => {
-        this.info = this.info.concat({id: this.id++, ...data})
+    @action handleUpload = () => {
+        this.postlist.push({
+            id: this.id,
+            name: this.name,
+            title: this.title,
+            passage: this.passage
+        });    
+        this.id++;
+        this.key++;
+        this.title = ""
+        this.passage = ""
+        
+    }
+    @action handleRemove = (name) => {
+        this.postlist = this.postlist.filter(post => post.name !== name)
     }
 }
 

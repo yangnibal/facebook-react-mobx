@@ -3,4 +3,65 @@
     width: 23%;
     height: 7rem;
     background: white;
+    display: flex;
+    flex-direction: row;
+}
+.post-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 10px;
+    color: #83d3c9;
+    cursor: pointer;
+}
+.post-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 10px;
+    color: #83d3c9;
+    cursor: pointer;
+    text-decoration: none;
+}
+.post-name:hover {
+    font-weight: 800;
+}
+.post-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 10px;
+    color: #83d3c9;
+    cursor: pointer;
+    text-decoration: none;
+}
+.post-detail:hover {
+    font-weight: 800;
+}
+.button-post {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 10px;
+    color: #83d3c9;
+    text-decoration: none;
+}
+.remove-button {
+    border:none;
+    outline: none;
+    color: #83d3c9;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+.remove-button:hover {
+    font-weight: 800;
+}
+.left-wrapper {
+    width: 60%;
 }

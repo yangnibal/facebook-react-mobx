@@ -1,0 +1,17 @@
+.cant-access-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.cant-access {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+}
+.access-h1 {
+    color: white;
+    font-weight: 800;
+}

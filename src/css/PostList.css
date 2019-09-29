@@ -1,7 +1,12 @@
 .postlist-wrapper {
     width: 100vw;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
+    overflow: scroll;
+}
+body {
+    overflow: hidden;
 }

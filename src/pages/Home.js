@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
-import Store from '../store/Store';
 import Header from '../components/Header';
 import '../css/Home.css';
-import PostList from '../components/PostList';
+import PostList from '../components/PostList.js';
+import { Link } from 'react-router-dom';
 
 @inject('store')
 @observer
 class Home extends Component {
     render() {
         const { store } = this.props;
-        if(Store.isLogin===false) {
+        if(store.isLogin===false) {
             return (
-                <div className="Login-please" onCLick={store.handletoLogin}>Login Please</div>
+                <div className="Login-please-wrapper">
+                    <Link className="Login-please" to="/login">Login Please</Link>
+                </div>
             )
         }
         return (

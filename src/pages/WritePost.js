@@ -9,9 +9,12 @@ import '../css/WritePost.css';
 class WritePost extends Component {
     render() {
         const { store } = this.props
+        
         return (
             <div>
-                <Header/>
+                <div className="header-wrapper">
+                    <Header/>
+                </div>
                 <div className="writepost-wrapper">
                     <div className="passage-wrapper">
                         <input
@@ -31,8 +34,8 @@ class WritePost extends Component {
                         />
                     </div>
                     <div>
-                        <Link onClick={store.handleCreate} className="post-link" to="/home">Post</Link>
-                        <Link className="cancle-link" to="/home">Cancle</Link>
+                        <Link onClick={() => store.handleUpload()} className="post-link" to="/">Post</Link>
+                        <Link onClick={store.handleRemove} className="cancle-link" to="/">Cancle</Link>
                     </div>
                 </div>
             </div>

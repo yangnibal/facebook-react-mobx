@@ -11,15 +11,15 @@ class SignupForm extends Component {
         return (
             <div className="signup-wrapper">
                 <div className="signup-input-wrapper">
-                    <input type="text" name="name" className="signup-input-name" value={store.name} onChange={store.handleChange} placeholder="name"/>
-                    <input type="text" name="phone" className="signup-input-phone" value={store.phone} onChange={store.handleChange} placeholder="phone"/>
-                    <input type="text" name="email" className="signup-input-email" value={store.email} onChange={store.handleChange} placeholder="email"/>
-                    <input type="password" name="password" className="signup-input-password" value={store.password} onChange={store.handleChange} placeholder="password"/>
-                    <input type="password" name="passwordcheck" className="signup-input-password" value={store.passwordcheck} onChange={store.handleChange} placeholder="password-check"/>
-                    <div onClick={store.isPwChecked} className="password-check-button">check</div>
+                    <input type="text" name="signupname" className="signup-input-name" value={store.signupname} onChange={store.handleChange} placeholder="name"/>
+                    <input type="text" name="signupphone" className="signup-input-phone" value={store.signupphone} onChange={store.handleChange} placeholder="phone"/>
+                    <input type="text" name="signupemail" className="signup-input-email" value={store.signupemail} onChange={store.handleChange} placeholder="email"/>
+                    <input type="password" name="signuppassword" className="signup-input-password" value={store.signuppassword} onChange={store.handleChange} placeholder="password"/>
+                    <input type="password" name="signuppasswordcheck" className="signup-input-password" value={store.signuppasswordcheck} onChange={store.handleChange} placeholder="password-check"/>
+                    <div onClick={() => store.handlePwChecked()} className="password-check-button">check</div>
                 </div>
                 <div className="signup-button-wrapper">
-                    <Link to="/home" className="signin-button" onClick={store.handleLogintrue}>sign in</Link>
+                    <Link className="signin-button" onClick={() => store.handleSignuptrue()} to={store.isLogin===true ? "/login" : "/signup"}>sign in</Link>
                 </div>
             </div>
         )

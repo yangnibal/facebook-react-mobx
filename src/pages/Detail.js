@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import '../css/Profile.css';
+import DetailForm from '../components/DetailForm';
 
 @inject('store')
 @observer
-class Profile extends Component {
-    render() { 
+class Detail extends Component {
+    render() {
         const { store, match } = this.props;
         if(store.isLogin===false) {
             return (
@@ -16,29 +16,17 @@ class Profile extends Component {
                 </div>
             )
         }
-        if(match.params.username!==store.name) {
-            return (
-                <div>
-                    <div className="header-wrapper">
-                        <Header/>
-                    </div>
-                    <div className="cant-access-wrapper">
-                        <h1 className="access-h1">이 계정에 접근할 수 있는 권한이 없습니다.</h1>
-                    </div>
-                </div>
-            )
-        }
         return (
-            <div className="profile-wrapper">
+            <div className="detail-wrapper">
                 <div className="header-wrapper">
                     <Header/>
                 </div>
-                <div className="profile-contents">
-
+                <div className="index-wrapper">
+                    <DetailForm id={store.postlist.id}/>
                 </div>
             </div>
         )
     }
 }
 
-export default Profile;
+export default Detail;
